@@ -10,6 +10,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+      padding: const EdgeInsets.all(10.0),
       crossAxisCount: 2,
       crossAxisSpacing: 4.0,
       mainAxisSpacing: 8.0,
