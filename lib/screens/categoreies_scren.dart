@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:meal_app/data/dummy_data.dart';
+import 'package:meal_app/widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
@@ -17,7 +18,11 @@ class CategoriesScreen extends StatelessWidget {
       // ),
       children: List.generate(
         dummyCategories.length,
-        (index) => const Text('Hello world'),
+        (index) => CategoryItem(
+          // key: LocalKey(index),
+          color: dummyCategories[index].color,
+          title: dummyCategories[index].title,
+        ),
       ),
     );
   }
