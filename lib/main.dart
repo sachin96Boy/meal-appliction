@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
         canvasColor: Colors.blueGrey[200],
         textTheme: const TextTheme(
-            titleLarge: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+          titleLarge: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+        ),
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: Colors.green,
         ),
