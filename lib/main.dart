@@ -39,6 +39,10 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
         MealDetailsScreen.routeName: (context) => const MealDetailsScreen()
       },
+      // this acts as a 404 page standerd in flutter
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => const CategoryMealsScreen(),
+      ),
     );
   }
 }
