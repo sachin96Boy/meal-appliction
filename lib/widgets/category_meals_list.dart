@@ -13,6 +13,7 @@ class CategoryMealsList extends StatelessWidget {
         dummyMeals.where((meal) => meal.categories.contains(id)).toList();
     return ListView.builder(
       itemBuilder: (context, index) => MealItem(
+        id: categoryMeals[index].id,
         title: categoryMeals[index].title,
         duration: categoryMeals[index].duration,
         imageUrl: categoryMeals[index].imageUrl,
