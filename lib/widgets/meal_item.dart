@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:meal_app/models/meal.dart';
+import 'package:meal_app/widgets/meal_item_cust_icon.dart';
 
 class MealItem extends StatelessWidget {
   final String title;
@@ -93,33 +94,12 @@ class MealItem extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Row(
-                  children: [
-                    const Icon(Icons.work),
-                    const SizedBox(
-                      width: 6.0,
-                    ),
-                    Text('$duration min'),
-                  ],
-                ),
-                Row(
-                  children: [
-                    const Icon(Icons.attach_money),
-                    const SizedBox(
-                      width: 6.0,
-                    ),
-                    Text(complexityText),
-                  ],
-                ),
-                Row(
-                  children: [
-                    const Icon(Icons.schedule),
-                    const SizedBox(
-                      width: 6.0,
-                    ),
-                    Text(affordibilityText),
-                  ],
-                )
+                MealItemCustomIcon(
+                    iconData: Icons.schedule, details: '$duration min'),
+                MealItemCustomIcon(
+                    iconData: Icons.work, details: complexityText),
+                MealItemCustomIcon(
+                    iconData: Icons.attach_money, details: affordibilityText)
               ],
             ),
           )
