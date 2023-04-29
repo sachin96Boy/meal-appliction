@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_app/screens/categoreies_scren.dart';
 import 'package:meal_app/screens/category_meals_screen.dart';
 
 import 'package:meal_app/screens/meal_details_screen.dart';
@@ -35,10 +36,11 @@ class MyApp extends StatelessWidget {
           secondary: Colors.green,
         ),
       ),
-      home: const TabsScreen(),
+      // home: const TabsScreen(),
       routes: {
         CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
-        MealDetailsScreen.routeName: (context) => const MealDetailsScreen()
+        MealDetailsScreen.routeName: (context) => const MealDetailsScreen(),
+        TabsScreen.routeName: (context) => const TabsScreen()
       },
       // this acts as a 404 page standerd in flutter
       onUnknownRoute: (settings) => MaterialPageRoute(
