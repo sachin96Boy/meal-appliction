@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_app/screens/filter_screen.dart';
 import 'package:meal_app/screens/tabs_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -20,6 +21,10 @@ class MainDrawer extends StatelessWidget {
 
   void onMealsTap(BuildContext context) {
     Navigator.of(context).pushNamed(TabsScreen.routeName);
+  }
+
+  void onFilterTap(BuildContext context) {
+    Navigator.of(context).pushNamed(FilterScreen.routeName);
   }
 
   @override
@@ -45,7 +50,7 @@ class MainDrawer extends StatelessWidget {
           ),
           const Divider(),
           buildListTile('Meals', Icons.restaurant, () => onMealsTap(context)),
-          buildListTile('Filter', Icons.settings, () {}),
+          buildListTile('Filter', Icons.settings, () => onFilterTap(context)),
         ],
       ),
     );

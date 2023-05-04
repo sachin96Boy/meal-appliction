@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/screens/categoreies_scren.dart';
 import 'package:meal_app/screens/category_meals_screen.dart';
+import 'package:meal_app/screens/filter_screen.dart';
 
 import 'package:meal_app/screens/meal_details_screen.dart';
 import 'package:meal_app/screens/tabs_screen.dart';
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
       routes: {
         CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
         MealDetailsScreen.routeName: (context) => const MealDetailsScreen(),
-        TabsScreen.routeName: (context) => const TabsScreen()
+        TabsScreen.routeName: (context) => const TabsScreen(),
+        FilterScreen.routeName:(context) => const FilterScreen()
       },
       // this acts as a 404 page standerd in flutter
       onUnknownRoute: (settings) => MaterialPageRoute(
