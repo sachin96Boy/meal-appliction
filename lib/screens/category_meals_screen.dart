@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/widgets/category_meals_list.dart';
 
-class CategoryMealsScreen extends StatelessWidget {
+class CategoryMealsScreen extends StatefulWidget {
   static const routeName = '/category-meal';
-  // final String id;
-  // final String title;
 
   const CategoryMealsScreen({
     super.key,
-    // required this.id,
-    // required this.title,
   });
 
   @override
-  Widget build(BuildContext context) {
+  State<CategoryMealsScreen> createState() => _CategoryMealsScreenState();
+}
+
+class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
+  String? categoryTitle;
+  String? categoryId;
+  @override
+  void didChangeDependencies() {
     final routeArgs =
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
-    final categoryTitle = routeArgs['title'];
-    final categoryId = routeArgs['id'];
+    categoryTitle = routeArgs['title'];
+    categoryId = routeArgs['id'];
+    super.didChangeDependencies();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle!),

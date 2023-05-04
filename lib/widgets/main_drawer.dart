@@ -20,11 +20,11 @@ class MainDrawer extends StatelessWidget {
   }
 
   void onMealsTap(BuildContext context) {
-    Navigator.of(context).pushNamed(TabsScreen.routeName);
+    Navigator.of(context).pushReplacementNamed(TabsScreen.routeName);
   }
 
   void onFilterTap(BuildContext context) {
-    Navigator.of(context).pushNamed(FilterScreen.routeName);
+    Navigator.of(context).pushReplacementNamed(FilterScreen.routeName);
   }
 
   @override
