@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FilterTiles extends StatefulWidget {
-  const FilterTiles({super.key});
+  final Map<String, bool> filters;
+  const FilterTiles({super.key, required this.filters});
 
   @override
   State<FilterTiles> createState() => _FilterTilesState();
@@ -12,6 +13,15 @@ class _FilterTilesState extends State<FilterTiles> {
   var _vegetarian = false;
   var _vegan = false;
   var _lactoseFree = false;
+
+  @override
+  void initState() {
+    widget.filters['glueten'] = _glutenFree;
+    widget.filters['lactose'] = _lactoseFree;
+    widget.filters['vegan'] = _vegan;
+    widget.filters['vegetarian'] = _vegetarian;
+    super.initState();
+  }
 
   Widget _buildSwithListTile(
     String title,

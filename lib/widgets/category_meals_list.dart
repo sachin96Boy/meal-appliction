@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:meal_app/data/dummy_data.dart';
-import 'package:meal_app/models/meal.dart';
 
+import 'package:meal_app/models/meal.dart';
 import 'package:meal_app/widgets/meal_item.dart';
 
 class CategoryMealsList extends StatefulWidget {
   final String id;
+  final List<Meal> availableMeals;
 
-  const CategoryMealsList({super.key, required this.id});
+  const CategoryMealsList(
+      {super.key, required this.id, required this.availableMeals});
 
   @override
   State<CategoryMealsList> createState() => _CategoryMealsListState();
@@ -17,7 +18,7 @@ class _CategoryMealsListState extends State<CategoryMealsList> {
   late List<Meal> categoryMeals;
   @override
   void initState() {
-    categoryMeals = dummyMeals
+    categoryMeals = widget.availableMeals
         .where((meal) => meal.categories.contains(widget.id))
         .toList();
     super.initState();
