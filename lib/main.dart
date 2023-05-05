@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
       routes: {
         CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
         MealDetailsScreen.routeName: (context) => const MealDetailsScreen(),
-        TabsScreen.routeName: (context) => const TabsScreen(),
-        FilterScreen.routeName: (context) => const FilterScreen()
+        FilterScreen.routeName: (context) => const FilterScreen(),
+        '/': (context) => const TabsScreen(),
       },
       // this acts as a 404 page standerd in flutter
       onUnknownRoute: (settings) => MaterialPageRoute(

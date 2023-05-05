@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/screens/filter_screen.dart';
-import 'package:meal_app/screens/tabs_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -20,7 +19,7 @@ class MainDrawer extends StatelessWidget {
   }
 
   void onMealsTap(BuildContext context) {
-    Navigator.of(context).pushReplacementNamed(TabsScreen.routeName);
+    Navigator.of(context).pushReplacementNamed('/');
   }
 
   void onFilterTap(BuildContext context) {

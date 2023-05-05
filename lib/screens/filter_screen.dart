@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_app/widgets/filter_tiles.dart';
 import 'package:meal_app/widgets/main_drawer.dart';
 
 class FilterScreen extends StatelessWidget {
@@ -13,7 +14,7 @@ class FilterScreen extends StatelessWidget {
       ),
       drawer: const MainDrawer(),
       body: const Center(
-        child: Text("filter screen page"),
+        child: FilterTiles(),
       ),
     );
   }
