@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:meal_app/widgets/filter_tiles.dart';
-import 'package:meal_app/widgets/main_drawer.dart';
+import '../widgets/filter_tiles.dart';
+import '../widgets/main_drawer.dart';
 
 class FilterScreen extends StatelessWidget {
   static const routeName = '/filters';
